@@ -7,7 +7,9 @@
     "commit": "git-cz",
     "test": "mocha *.test.js",
     "format": "prettier --write *.js",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "homepage": "https://github.com/commitizen/cz-conventional-changelog",
   "repository": {
@@ -27,7 +29,8 @@
     "lodash.map": "^4.5.1",
     "longest": "^2.0.1",
     "right-pad": "^1.0.1",
-    "word-wrap": "^1.0.3"
+    "word-wrap": "^1.0.3",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@types/chai": "^4.1.7",
@@ -47,5 +50,6 @@
     "commitizen": {
       "path": "./index.js"
     }
-  }
+  },
+  "snyk": true
 }
